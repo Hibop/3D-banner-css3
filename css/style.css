@@ -1,0 +1,272 @@
+
+
+.fixedMenu{
+	width: 1300px;
+	height: 56px;
+	position: fixed;
+	left: 0px;
+	top:0px;
+	z-index: 1000;
+}
+
+.bMtot{
+	width: 980px;
+	height: 55px;
+	margin: 1px auto;
+	/*border: 1px solid;*/
+	position: relative;
+	font-size: 24px;
+	line-height: 54px;
+	text-align: center;
+	font-weight: bolder;
+	color: white;
+	background-color: white;
+	z-index: 1000;
+	/*position: fixed;*/
+}
+.muneBox{
+	float: left;
+	width: 160px;
+	height: 54px;
+	border-left: 3px solid black;
+	/*border-right: 3px solid black;*/
+	background-color: #black;
+	position: relative;
+
+}
+.muneBox.title{
+	padding-left:  30px;
+	padding-right:  30px;
+}
+
+.muneBox .title:hover{
+	cursor: pointer;
+	border-left: 3px solid red;
+	color: pink;
+}
+
+
+.muneSub{
+	/*position: absolute;*/
+	/*left: -3px;*/
+	/*clear: both;*/
+	/*border: 1px solid white;*/
+/*	transform:rotateY(90deg);*/
+
+}
+.list{
+	text-align: center;
+	width: 96px;
+	height: 54px;
+	/*border: 3px solid #333;*/
+	background-color: #333;
+	/*border-bottom: 2px solid white;*/
+	padding-left:  30px;
+	padding-right:  30px;
+	font-size: 20px;
+	/*display: none;*/
+
+}
+
+.muneSub{
+	-webkit-perspective:400px;
+	perspective:400px;
+}
+/*=====设置3D视图=======*/
+.muneSub{
+	max-height: 0px;
+	transition:max-height 0s linear 1s;
+}
+.muneBox:hover .muneSub{
+	max-height: 1000px;
+	transition:max-height 0s linear 0s;
+}
+/*===设置max-height的原因是为了保证鼠标移到菜单下边也触发list效果======*/
+
+.muneBox:hover .muneSub>.list{
+	transition:transform 0.5s,opacity 0.5s;
+	opacity: 1;
+	transform:rotateY(0deg);
+}
+.muneSub>.list{
+	opacity: 0;
+	transform:rotateY(90deg);
+	transition:transform 0.5s,opacity 0.5s;
+}
+
+.muneBox:hover .muneSub>.list:nth-child(1){
+	transition-delay:0s;
+}
+.muneBox:hover .muneSub>.list:nth-child(2){
+	transition-delay:0.2s;
+}
+.muneBox:hover .muneSub>.list:nth-child(3){
+	transition-delay:0.4s;
+}
+.muneBox:hover .muneSub>.list:nth-child(4){
+	transition-delay:0.6s;
+}
+.muneBox:hover .muneSub>.list:nth-child(5){
+	transition-delay:0.8s;
+}
+
+.muneSub>.list:nth-child(5){
+	transition-delay:0s;
+}
+.muneSub>.list:nth-child(4){
+	transition-delay:0.2s;
+}
+.muneSub>.list:nth-child(3){
+	transition-delay:0.4s;
+}
+.muneSub>.list:nth-child(2){
+	transition-delay:0.6s;
+}
+.muneSub>.list:nth-child(1){
+	transition-delay:0.8s;
+}
+
+
+
+
+
+	/*rotateY(-90deg);
+	-webkit-animation:listrotate 1s ease-in;*/
+/*
+@keyframes listrotate{
+	0%{
+	transform:rotateY(-90deg);
+	}
+	50%{
+	transform:rotateY(-45deg);
+	}
+	100%{
+	transform:rotateY(0deg);
+	}
+}*/
+
+
+/*==========================================*/
+
+/*===================3D效果=====================*/
+.cub{
+	width: 160px;
+	height: 54px;
+}
+.cubBox{
+	width: 160px;
+	height: 54px;
+	/*margin-top:120px;*/
+	position:relative;
+	-webkit-perspective-origin:50% 50%;
+	perspective-origin:50% 50%;
+	-webkit-perspective:1000px;
+	perspective:1000px;
+}
+.cub{
+	position: absolute;
+	transform-style:preserve-3d;
+	backface-visibility:visible;
+	transform-origin:50% 50% -27px;
+	transform:rotateX(0deg) rotateY(0deg);
+	/*top:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;*/
+	
+}
+@keyframes myRotate{
+	0%{
+		transform:rotateX(0deg) rotateY(0deg);
+	}
+	50%{
+		transform:rotateX(90deg) rotateY(0deg);
+	}
+	100%{
+		transform:rotateX(0deg) rotateY(0deg);
+	}
+}
+
+.cubRotate:hover{
+	transition:all 1s ease;
+	transform:rotateX(90deg) rotateY(0deg);
+}
+.cubRotate{
+	transition:all 1s ease;
+	/*-webkit-animation:myRotate 4s linear 0s infinite;*/
+	transform:rotateX(0deg) rotateY(0deg);
+
+}
+
+.front{
+	position: absolute;
+	background-color: black;
+	transform-origin:50% 50% -27px;
+	transform:rotateX(0deg);
+}
+.bottom{
+	position: absolute;
+	background-color: #2fafe8;
+	transform-origin:50% 50% -27px;
+	transform:rotateX(-90deg);
+}
+
+
+/*===================banner=====================*/
+.width-height{
+	width: 700px;
+	height: 500px;
+	
+}
+.bannerBox{
+	margin: 70px auto;
+/*	border: 1px solid;*/
+	position: relative;
+	-webkit-perspective-origin:50% 50%;
+	perspective-origin:50% 20%;
+	-webkit-perspective:500;
+	perspective:2000px;
+}
+.bannerRotate{
+	position: absolute;
+	transform-style:preserve-3d;
+	backface-visibility:visible;
+	transform-origin:50% 50% -606.2px;
+	transform:rotateX(0deg) rotateY(0deg);
+	-webkit-animation:bannerRun 18s cubic-bezier(0.4, 0.34, 0.17, 1.16) 0s infinite;
+}
+
+@keyframes bannerRun{
+	0%{
+		transform:rotateX(0deg) rotateY(0deg);
+	}
+	16.667%{
+		transform:rotateX(0deg) rotateY(60deg);
+	}
+	33.333%{
+		transform:rotateX(0deg) rotateY(120deg);
+	}
+	50%{
+		transform:rotateX(0deg) rotateY(180deg);
+	}
+	66.666%{
+		transform:rotateX(0deg) rotateY(240deg);
+	}
+	83.333%{
+		transform:rotateX(0deg) rotateY(300deg);
+	}
+	100%{
+		transform:rotateX(0deg) rotateY(360deg);
+	}
+}
+
+.spin{
+	position: absolute;
+	background-color: #333;
+	/*opacity: 0.8;*/
+	transform-origin:50% 50% -606.2px;
+	background-image: url("../image/1.jpg");
+	background-repeat: no-repeat;
+	/*background-position:100% 100%;*/
+	background-size:100% 100%;
+}
