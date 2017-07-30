@@ -1,6 +1,6 @@
 
 - 1. 自进入PaaS-CSE,努力熟悉PaaS云相关业务，并积极应对项目新需求开发和DTS单处理，时刻保持对问题的敏感度；
 - 2. 积极完成华为合作方交给任务，月贡献平均代码量1500+行/月，DTS单修改量25个/月；
-- 3. 熟悉React-redux-webpack-ES6-less-Babel项目技术栈，独立完成需求：微服务多维度作用域对接、灰度发布页面及增删改查、分布式事务页面、Oauth 2.0协议github授权；
+- 3. 熟悉React-redux-webpack-ES6-less-Babel项目技术栈，独立完成需求：微服务多维度作用域对接、灰度发布页面及增删改查、分布式事务页面、Oauth 2.0协议github授权等；
 - 4. 熟悉CSE-console-website各个模块页面、相关三方件、接口等相关技术，维护CSE-console-website项目相关wiki文档的归纳、总结、归档；
-- 5. 工作积极认真，
+- 5. 工作积极认真，思考总结，
